@@ -5,18 +5,19 @@ import java.io.*;
 public class FileInputStreamManager {
 
     public void fileStreamReader() {
+        try{
 
+        BufferedReader file = new BufferedReader(new FileReader("resources/newFile.txt"));
 
-//        try {
-//            InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("resources/newFile.txt"));
-//
-//            int line = 0;
-//            while (data )
-//
-//            while (line = reader.)
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        String line;
+        while ((line = file.readLine()) != null) {
+            String[] lineData = line.split(" ");
+            System.out.println(lineData);
+        }
+    }catch (IOException e) {
+                e.printStackTrace();
+            }
 
+        }
     }
-}
+
